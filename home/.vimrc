@@ -5,6 +5,7 @@ set nocompatible
 colorscheme pablo
 set background=dark
 syntax on
+set t_Co=256 
 
 
 " Editor
