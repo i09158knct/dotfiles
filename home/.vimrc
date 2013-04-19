@@ -4,8 +4,8 @@ set nocompatible
 " Theme
 colorscheme pablo
 set background=dark
+set t_Co=256
 syntax on
-set t_Co=256 
 
 
 " Editor
@@ -52,7 +52,7 @@ set wildmode=list:full
 
 
 
-" Key
+" Key Bindings
 inoremap <C-@> <C-[>
 
 inoremap <C-n> <Down>
