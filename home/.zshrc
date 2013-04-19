@@ -1,47 +1,151 @@
-# Set up the prompt
-
-autoload -Uz promptinit
-promptinit
-prompt adam1
-
-setopt histignorealldups sharehistory
-
-# Use emacs keybindings even if our EDITOR is set to vi
+# General
+export LANG=ja_JP.UTF-8
+setopt print_eight_bit
 bindkey -e
 
-# Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
-HISTSIZE=10000
-SAVEHIST=10000
+WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
+
+
+
+# Prompt
+function () {
+  local username="%F{green}%n@%m%f"
+  local ctime="%*"
+  local cdir="%F{yellow}%~%f"
+  local prmpt="%B%#%b"
+  local prmpt="%F{green}%0(?||%18(?||%f%F{red}))%#%f"
+  local br="
+"
+
+  PROMPT="%B$username $ctime $cdir$br$prmpt%b "
+  PROMPT2="%_ >"
+  SPROMPT="zsh: correct '%R' to '%r' [nyae]? "
+  RPROMPT="%1(v|%F{green}%1v%f|)"
+}
+
+
+
+# History
 HISTFILE=~/.zsh_history
+HISTSIZE=100000
+SAVEHIST=100000
+setopt hist_ignore_dups
+setopt hist_reduce_blanks
 
-# Use modern completion system
-autoload -Uz compinit
-compinit
+autoload -Uz history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^p" history-beginning-search-backward-end
+bindkey "^n" history-beginning-search-forward-end
 
-zstyle ':completion:*' auto-description 'specify: %d'
-zstyle ':completion:*' completer _expand _complete _correct _approximate
-zstyle ':completion:*' format 'Completing %d'
-zstyle ':completion:*' group-name ''
+
+
+# Other Options
+setopt auto_cd
+setopt auto_pushd
+setopt extended_glob
+setopt list_packed
+setopt no_list_beep
+setopt no_flow_control
+
+
+
+# Completion
+autoload -Uz compinit; compinit
+setopt complete_aliases
 zstyle ':completion:*' menu select=2
-eval "$(dircolors -b)"
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*' list-colors ''
-zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
-zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
-zstyle ':completion:*' menu select=long
-zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
-zstyle ':completion:*' use-compctl false
-zstyle ':completion:*' verbose true
+zstyle ':completion:*' use-cache true
+zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' '+m:{A-Z}={a-z}'
 
-zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
-zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
+
+
+# VCS
+# http://d.hatena.ne.jp/mollifier/20100906/p1
+autoload -Uz colors; colors
+autoload -Uz add-zsh-hook
+autoload -Uz vcs_info
+
+zstyle ':vcs_info:*' enable git svn hg bzr
+zstyle ':vcs_info:*' formats '(%s)-[%b]'
+zstyle ':vcs_info:*' actionformats '(%s)-[%b|%a]'
+zstyle ':vcs_info:(svn|bzr):*' branchformat '%b:r%r'
+zstyle ':vcs_info:bzr:*' use-simple true
+
+autoload -Uz is-at-least
+if is-at-least 4.3.10; then
+  zstyle ':vcs_info:git:*' check-for-changes true
+  zstyle ':vcs_info:git:*' stagedstr "+"
+  zstyle ':vcs_info:git:*' unstagedstr "-"
+  zstyle ':vcs_info:git:*' formats '(%s)-[%b] %c%u'
+  zstyle ':vcs_info:git:*' actionformats '(%s)-[%b|%a] %c%u'
+fi
+
+function _update_vcs_info_msg() {
+    psvar=()
+    LANG=en_US.UTF-8 vcs_info
+    [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+}
+add-zsh-hook precmd _update_vcs_info_msg
+
+
+
+# PATHs
+export PATH=$PATH:$HOME/bin
 
 
 
 # rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH=$PATH:$HOME/.rbenv/bin
+export PATH=$PATH:$HOME/.rbenv/shims
 eval "$(rbenv init -)"
+
+
 
 # nvm
 source ~/.nvm/nvm.sh
-nvm use 0.10
+
+
+
+# homesick
+function () {
+  local HOMESICK_MAIN="dotfiles"
+  alias hcommit="homesick commit $HOMESICK_MAIN"
+  alias hpush="homesick push $HOMESICK_MAIN"
+  alias hpull="homesick pull $HOMESICK_MAIN"
+  alias hsymlink="homesick symlink $HOMESICK_MAIN"
+  alias hupdate="homesick pull $HOMESICK_MAIN; homesick symlink $HOMESICK_MAIN"
+}
+
+
+
+# Aliases
+alias g="git"
+alias r="rails"
+alias gad="git add"
+alias gst="git status"
+alias gcm="git commit"
+alias gps="git push"
+alias gpl="git pull"
+alias pyserver="python -m SimpleHTTPServer"
+
+
+
+# Each OS
+case ${OSTYPE} in
+  darwin*)
+    alias copywd="pwd | pbcopy"
+    alias ls="ls -FG"
+    ;;
+
+  linux*)
+    ;;
+
+esac
+
+[ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
+
+
+
+# End
+true
