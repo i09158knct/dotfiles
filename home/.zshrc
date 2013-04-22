@@ -91,15 +91,13 @@ add-zsh-hook precmd _update_vcs_info_msg
 
 
 # PATHs
-export PATH=$PATH:$HOME/bin
+export PATH="$PATH:$HOME/bin"
 
 
 
 # rbenv
-export PATH=$PATH:$HOME/.rbenv/bin
-export PATH=$PATH:$HOME/.rbenv/shims
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-
 
 
 # nvm
