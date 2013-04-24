@@ -59,7 +59,6 @@ zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' '+m:{A-Z}={a-z}'
 
 
 
-
 # VCS
 # http://d.hatena.ne.jp/mollifier/20100906/p1
 autoload -Uz colors; colors
@@ -98,6 +97,7 @@ export PATH="$PATH:$HOME/bin"
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
 
 
 # nvm
