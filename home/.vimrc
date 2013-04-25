@@ -1,4 +1,5 @@
 set nocompatible
+filetype off
 
 
 " Theme
@@ -51,6 +52,21 @@ set wildmenu
 set wildmode=list:full
 
 
+" File Types
+au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
+
+
+
+" Plugin
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim
+  call neobundle#rc(expand('~/.vim/bundle'))
+endif
+
+NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/vimproc'
+NeoBundle 'kchmck/vim-coffee-script'
+
 
 " Key Bindings
 inoremap <C-@> <C-[>
@@ -67,3 +83,10 @@ inoremap <C-c> <C-n>
 
 inoremap <C-d> <Delete>
 inoremap <C-h> <C-h>
+
+
+
+" End
+filetype plugin indent on
+filetype indent on
+syntax on
