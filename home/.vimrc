@@ -3,7 +3,7 @@ filetype off
 
 
 " Theme
-colorscheme pablo
+color pablo
 set background=dark
 set t_Co=256
 syntax on
@@ -26,15 +26,18 @@ set whichwrap=b,s,h,s,<,>,[,]
 set expandtab
 set shiftwidth=2
 set tabstop=2
+set softtabstop=2
 set autoindent
 set smartindent
 set smarttab
+
+autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
 
 
 " View
 set cursorline
 set ruler
-set scrolloff=3
+set scrolloff=5
 set showmatch
 set nowrap
 
