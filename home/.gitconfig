@@ -1,6 +1,8 @@
 [user]
   name = i09158knct
   email = i09158knct@gmail.com
+[include]
+  path = .gitconfig.local
 [color]
   ui = auto
 [tig "bind"]

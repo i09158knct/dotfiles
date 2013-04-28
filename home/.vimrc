@@ -84,6 +84,7 @@ inoremap <C-c> <C-n>
 inoremap <C-d> <Delete>
 inoremap <C-h> <C-h>
 
+nnoremap ; :
 
 
 " End
