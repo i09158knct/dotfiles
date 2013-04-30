@@ -1,0 +1,17 @@
+# Prefix
+escape ^Ll
+
+
+
+# General
+defencoding utf-8
+startup_message off
+autodetach on
+
+
+
+# Key Bindings
+bind ^v eval "split" "focus" "screen"
+bind q eval "remove"
+
+bind r eval "source ~/.screenrc" "echo 'Reloaded .screenrc'"
