@@ -137,6 +137,7 @@ case ${OSTYPE} in
     ;;
 
   linux*)
+    xmodmap .Xmodmap.ubuntu
     ;;
 
 esac

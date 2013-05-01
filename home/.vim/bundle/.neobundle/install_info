@@ -1,0 +1,2 @@
+1.0
+{'vimproc': {'checked_time': 1367123580, 'installed_uri': 'git://github.com/Shougo/vimproc.git', 'updated_time': 1367123580}, 'neobundle.vim': {'checked_time': 1367123580, 'installed_uri': 'git://github.com/Shougo/neobundle.vim.git', 'updated_time': 1367123580}, 'vim-coffee-script': {'checked_time': 1367123583, 'installed_uri': 'git://github.com/kchmck/vim-coffee-script.git', 'updated_time': '1349559829'}}
