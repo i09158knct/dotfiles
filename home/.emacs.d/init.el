@@ -52,3 +52,31 @@
 (global-set-key (kbd "C-@") 'ESC-prefix)
 
 (global-set-key (kbd "C-t") 'other-window)
+
+
+
+;;; Packages
+(require 'package)
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
+(add-hook 'clojure-mode-hook 'paredit-mode)
+
+
+;(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+(require 'auto-complete-config)
+(ac-config-default)
+(setq ac-delay 0)
+(setq ac-auto-show-menu 0)
+(setq ac-use-fuzzy t)
+
+
+
+
+
+
+
+
+
+
