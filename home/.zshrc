@@ -105,6 +105,11 @@ source ~/.nvm/nvm.sh
 
 
 
+# fasd
+eval "$(fasd --init auto)"
+
+
+
 # homesick
 function () {
   local HOMESICK_MAIN="dotfiles"
