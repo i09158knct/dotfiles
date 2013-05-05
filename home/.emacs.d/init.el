@@ -3,6 +3,15 @@
 (prefer-coding-system 'utf-8)
 
 
+
+;;; Scroll
+(setq scroll-conservatively 1)
+(setq scroll-step 1)
+(setq scroll-margin 5)
+(setq next-screen-context-lines 1)
+
+
+
 ;;; Mode Line
 (line-number-mode t)
 (column-number-mode t)
@@ -70,13 +79,3 @@
 (setq ac-delay 0)
 (setq ac-auto-show-menu 0)
 (setq ac-use-fuzzy t)
-
-
-
-
-
-
-
-
-
-
