@@ -48,7 +48,7 @@ autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
 """ View
 set cursorline
 set ruler
-set scrolloff=5
+set scrolloff=3
 set showmatch
 set nowrap
 

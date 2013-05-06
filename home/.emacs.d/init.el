@@ -7,7 +7,7 @@
 ;;; Scroll
 (setq scroll-conservatively 1)
 (setq scroll-step 1)
-(setq scroll-margin 5)
+(setq scroll-margin 3)
 (setq next-screen-context-lines 1)
 
 
@@ -18,7 +18,8 @@
 
 
 
-;;; Indent
+;;; Indentation
+(global-set-key "\C-m" 'newline-and-indent)
 (setq-default tab-width 2)
 (setq-default indent-tabs-mode nil)
 
@@ -58,8 +59,7 @@
 (keyboard-translate ?\C-h ?\C-?)
 (global-set-key (kbd "C-x ?") 'help-command)
 
-(global-set-key (kbd "C-@") 'ESC-prefix)
-
+;(global-set-key (kbd "C-@") 'ESC-prefix)
 (global-set-key (kbd "C-t") 'other-window)
 
 
