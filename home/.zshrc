@@ -106,7 +106,7 @@ source ~/.nvm/nvm.sh
 
 
 # fasd
-eval "$(fasd --init auto)"
+[ fasd ] && eval "$(fasd --init auto)"
 
 
 
