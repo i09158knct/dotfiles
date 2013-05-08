@@ -108,7 +108,6 @@ neobundle-options-terminal	neobundle.txt	/*neobundle-options-terminal*
 neobundle-options-type	neobundle.txt	/*neobundle-options-type*
 neobundle-options-type__filename	neobundle.txt	/*neobundle-options-type__filename*
 neobundle-options-type__protocol	neobundle.txt	/*neobundle-options-type__protocol*
-neobundle-options-type__shallow	neobundle.txt	/*neobundle-options-type__shallow*
 neobundle-recipe	neobundle.txt	/*neobundle-recipe*
 neobundle-unite-source-neobundle	neobundle.txt	/*neobundle-unite-source-neobundle*
 neobundle-unite-source-neobundle-install	neobundle.txt	/*neobundle-unite-source-neobundle-install*
