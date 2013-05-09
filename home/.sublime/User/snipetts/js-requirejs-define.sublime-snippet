@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[
+define([
+  ${1:}
+], function(${2:}) {
+  var ${3:mod};
+  return ${3:mod};
+});
+
+]]></content>
+  <tabTrigger>my__requirejs_define</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

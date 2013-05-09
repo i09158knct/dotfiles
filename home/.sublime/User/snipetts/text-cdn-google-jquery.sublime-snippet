@@ -1,0 +1,7 @@
+<snippet>
+  <content><![CDATA[
+<script src="http${1:s}://ajax.googleapis.com/ajax/libs/jquery/${2:1.9.1}/jquery${3:.min}.js"></script>
+]]></content>
+  <tabTrigger>my__CDN_jQuery</tabTrigger>
+  <scope>text</scope>
+</snippet>

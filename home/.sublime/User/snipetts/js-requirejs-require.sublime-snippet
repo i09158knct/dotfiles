@@ -1,0 +1,12 @@
+<snippet>
+  <content><![CDATA[
+require([
+  ${1:}
+], function(${2:}) {
+  ${3:}
+});
+
+]]></content>
+  <tabTrigger>my__requirejs_require</tabTrigger>
+  <scope>source.js</scope>
+</snippet>

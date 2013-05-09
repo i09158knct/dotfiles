@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[
+require [
+  'jquery'
+  'underscore'
+  'backbone'
+], (\$, _, Backbone) ->
+  ${1:}
+
+]]></content>
+  <tabTrigger>my__requirejs_require</tabTrigger>
+  <scope>source.coffee</scope>
+</snippet>

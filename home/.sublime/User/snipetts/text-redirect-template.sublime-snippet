@@ -1,0 +1,15 @@
+<snippet>
+  <content><![CDATA[
+<a href="${1:http://www.google.co.jp/}" id="link">Redirecting now...</a>
+
+<script type="text/javascript">
+  var link = document.getElementById("link");
+  var url = link.href;
+  link.style.display = "none";
+  window.location.replace(url);
+</script>
+
+]]></content>
+  <tabTrigger>my__RedirectTemplate</tabTrigger>
+  <scope>text</scope>
+</snippet>

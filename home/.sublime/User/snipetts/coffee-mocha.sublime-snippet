@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[
+describe '', () ->
+  obj = null
+  beforeEach () ->
+    obj = ''
+
+  it 'should', () ->
+
+]]></content>
+  <tabTrigger>my__moch_describe.coffee</tabTrigger>
+  <scope>source.coffee</scope>
+</snippet>

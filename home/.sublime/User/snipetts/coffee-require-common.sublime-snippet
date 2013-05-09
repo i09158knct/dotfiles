@@ -1,0 +1,7 @@
+<snippet>
+  <content><![CDATA[
+${1:util} = require '${1:util}'
+]]></content>
+  <tabTrigger>my__Require_Common.coffee</tabTrigger>
+  <scope>source.coffee</scope>
+</snippet>
