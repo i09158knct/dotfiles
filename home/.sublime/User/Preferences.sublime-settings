@@ -2,7 +2,7 @@
 	"auto_complete_commit_on_tab": true,
 	"bold_folder_labels": true,
 	"close_windows_when_empty": false,
-	"color_scheme": "Packages/Railscasts.tmTheme",
+	"color_scheme": "Packages/User/themes/railscasts/RailsCastsColorScheme.tmTheme",
 	"csslint_options":
 	{
 		"box-model": true,
