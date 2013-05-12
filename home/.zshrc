@@ -144,6 +144,10 @@ case ${OSTYPE} in
 
   linux*)
     xmodmap .Xmodmap.ubuntu
+    ln -fs ~/.sublime/User ~/.config/sublime-text-2/Packages/User
+    function subl() {
+      ~/Applications/Sublime\ Text\ 2/sublime_text $@ &
+    }
     ;;
 
 esac
