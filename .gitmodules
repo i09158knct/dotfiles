@@ -4,3 +4,6 @@
 [submodule "home/.vim/bundle/vimproc"]
 	path = home/.vim/bundle/vimproc
 	url = git://github.com/Shougo/vimproc
+[submodule "home/.sublime/User/themes/railscasts"]
+	path = home/.sublime/User/themes/railscasts
+	url = git://github.com/tdm00/sublime-theme-railscasts.git
