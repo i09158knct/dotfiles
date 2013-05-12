@@ -1,22 +1,17 @@
 <snippet>
   <content><![CDATA[
+path = require 'path'
+
 module.exports = (grunt) ->
   grunt.initConfig
-    watch:
-      coffee:
+    regarde:
+      livereload:
         files: [
-          '<%= coffee.build.cwd %><%= coffee.build.src %>'
-          'Gruntfile.coffee'
+          'public/**/*'
+          'assets/**/*'
+          'views/**/*'
         ]
-        tasks: ['coffee']
-      test:
-        files: [
-          '<%= coffee.build.dest %>**/*'
-          'test/**/*'
-        ]
-        tasks: [
-          'shell:test'
-        ]
+        tasks: ['livereload']
 
 
     coffee:
@@ -27,42 +22,89 @@ module.exports = (grunt) ->
         dest: 'lib/'
         ext: '.js'
 
-
-    shell:
       test:
-        command: do -> [
-          './node_modules/mocha/bin/mocha'
-          'test/main-spec.coffee'
-          '--compilers coffee:coffee-script'
-          '--reporter spec'
-        ].join ' '
-        options:
-          stdout: true
-          stderr: true
-          failOnError: true
+        files: [
+          'models/**/*'
+          'routes/**/*'
+          'tasks/**/*'
+          'test/**/*'
+          'server.coffee'
+        ]
+        tasks: ['test']
+
+
+    simplemocha:
+      options:
+        reporter: 'spec'
+        compilers: ['coffee:coffee-script']
+      all: ['test/**/*.coffee']
+
+
+    livereload:
+      port: 35729
+
+
+    exec:
+      base_command: [
+        'nodemon server.coffee'
+        '-w models'
+        '-w routes'
+        '-w lib'
+        '-w server.coffee'
+        '-d 0'
+      ].join ' '
+
+      server: command: '<%= exec.base_command %>'
+      server_background: command: '<%= exec.base_command %> &'
 
 
 
-  [
-    'grunt-shell'
-    'grunt-contrib-coffee'
-    'grunt-contrib-watch'
-  ].forEach grunt.loadNpmTasks
+  grunt.loadNpmTasks task for task in [
+    'grunt-exec'
+    'grunt-simple-mocha'
+    'grunt-regarde'
+    'grunt-contrib-livereload'
+  ]
+
+
 
   grunt.registerTask 'copy-components', ->
-    grunt.file.mkdir 'app/js/lib'
-    component = grunt.file.readJSON 'component.json'
-    for name of component.dependencies
-      grunt.file.copy "components/#{name}/#{name}.js", "app/js/lib/#{name}.js"
+    (
+      grunt.file.mkdir pathName
+      for source in sources
+        fileName = path.basename source
+        grunt.log.writeln "copying #{fileName}"
+        grunt.file.copy source, "#{pathName}/#{fileName}"
+
+    ) for pathName, sources of {
+      'assets/js/vender': [
+        'components/bootstrap/docs/assets/js/bootstrap.min.js'
+        'components/backbone/backbone.js'
+        'components/underscore/underscore.js'
+        'components/jquery/jquery.js'
+        'components/mousetrap/mousetrap.js'
+      ]
+      'assets/css/vender': [
+        'components/bootstrap/docs/assets/css/bootstrap.css'
+      ]
+      'public/img': [
+        'components/bootstrap/docs/assets/img/glyphicons-halflings.png'
+        'components/bootstrap/docs/assets/img/glyphicons-halflings-white.png'
+      ]
+    }
 
 
-  grunt.registerTask 'init', [
-    'copy-components'
-  ]
 
-  grunt.registerTask 'default', [
-    'watch'
-  ]
+  grunt.registerTask name, targets for name, targets of {
+    'initialize': ['copy-components']
+    'server': ['exec:server']
+    'test': ['simplemocha']
+    'default': [
+      'livereload-start'
+      'exec:server_background'
+      'regarde'
+    ]
+  }
 
 ]]></content>
   <tabTrigger>my__Gruntfile.coffee</tabTrigger>
