@@ -7,3 +7,6 @@
 [submodule "home/.sublime/User/themes/railscasts"]
 	path = home/.sublime/User/themes/railscasts
 	url = git://github.com/tdm00/sublime-theme-railscasts.git
+[submodule "home/.sublime/User/themes/flatland"]
+	path = home/.sublime/User/themes/flatland
+	url = git://github.com/thinkpixellab/flatland.git

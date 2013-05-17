@@ -138,13 +138,20 @@ alias pyserver="python -m SimpleHTTPServer"
 # Each OS
 case ${OSTYPE} in
   darwin*)
+    ln -fs ~/.sublime/User \
+           ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
+    ln -fs ~/.sublime/User/themes/flatland \
+           ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Theme\ -\ Flatland
     alias copywd="pwd | pbcopy"
     alias ls="ls -FG"
     ;;
 
   linux*)
     xmodmap .Xmodmap.ubuntu
-    ln -fs ~/.sublime/User ~/.config/sublime-text-2/Packages/User
+    ln -fs ~/.sublime/User \
+           ~/.config/sublime-text-2/Packages/User
+    ln -fs ~/.sublime/User/themes/flatland \
+           ~/.config/sublime-text-2/Packages/Theme\ -\ Flatland
     function subl() {
       ~/Applications/Sublime\ Text\ 2/sublime_text $@ &
     }

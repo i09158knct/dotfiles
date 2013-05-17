@@ -51,7 +51,7 @@
 	"scroll_speed": 5.0,
 	"sublimelinter": "load-save",
 	"tab_size": 2,
-	"theme": "Flatland.sublime-theme",
+	"theme": "Flatland Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"word_separators": "./\\()\"':,.;<>~!@#%^&*|+=[]{}`~?",
