@@ -3,6 +3,7 @@
 	"bold_folder_labels": true,
 	"close_windows_when_empty": false,
 	"color_scheme": "Packages/User/themes/railscasts/RailsCastsColorScheme.tmTheme",
+	"default_line_ending": "unix",
 	"detect_slow_plugins": true,
 	"disable_tab_abbreviations": true,
 	"drag_text": false,
