@@ -33,11 +33,12 @@
 	],
 	"find_selected_text": true,
 	"font_face": "Courier",
-	"font_options": "",
+	"font_options": [],
 	"font_size": 12,
 	"ignored_packages":
 	[
 		"vintage",
+		"Vintage",
 		"Perforce",
 		"Nodejs"
 	],
