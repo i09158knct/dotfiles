@@ -3,37 +3,7 @@
 	"bold_folder_labels": true,
 	"close_windows_when_empty": false,
 	"color_scheme": "Packages/User/themes/railscasts/RailsCastsColorScheme.tmTheme",
-	"csslint_options":
-	{
-		"box-model": true,
-		"box-sizing": "warning",
-		"compatible-vendor-prefixes": "warning",
-		"display-property-grouping": true,
-		"duplicate-background-images": "warning",
-		"duplicate-properties": true,
-		"empty-rules": true,
-		"errors": true,
-		"fallback-colors": "warning",
-		"floats": "warning",
-		"font-faces": "warning",
-		"font-sizes": "warning",
-		"gradients": "warning",
-		"import": "warning",
-		"known-properties": true,
-		"outline-none": "warning",
-		"overqualified-elements": "warning",
-		"qualified-headings": "warning",
-		"regex-selectors": "warning",
-		"rules-count": "warning",
-		"shorthand": "warning",
-		"star-property-hack": "warning",
-		"text-indent": "warning",
-		"underscore-property-hack": "warning",
-		"unique-headings": "warning",
-		"universal-selector": "warning",
-		"vendor-prefix": true,
-		"zero-units": "warning"
-	},
+	"default_line_ending": "unix",
 	"detect_slow_plugins": true,
 	"disable_tab_abbreviations": true,
 	"drag_text": false,
@@ -71,23 +41,10 @@
 		"Perforce",
 		"Nodejs"
 	],
-	"jshint_options":
-	{
-		"browser": true,
-		"devel": true,
-		"eqnull": true,
-		"es5": true,
-		"evil": true,
-		"immed": true,
-		"latedef": true,
-		"laxcomma": true,
-		"regexdash": true,
-		"sub": true,
-		"trailing": true,
-		"wsh": true
-	},
 	"margin": -5,
+	"move_to_limit_on_up_down": true,
 	"open_files_in_new_window": false,
+	"overlay_scroll_bars": "disabled",
 	"rulers":
 	[
 		80
@@ -96,9 +53,10 @@
 	"scroll_speed": 5.0,
 	"sublimelinter": "load-save",
 	"tab_size": 2,
-	// "theme": "Flatland.sublime-theme",
+	"theme": "Flatland Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
+	"word_separators": "./\\()\"':,.;<>~!@#%^&*|+=[]{}`~?",
 	"word_wrap": false,
 	"wrap_width": 80
 }
