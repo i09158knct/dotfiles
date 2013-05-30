@@ -11,3 +11,11 @@
 [core]
   excludesfile = ~/.gitignore
   editor = /usr/bin/vim
+[alias]
+  b = branch
+  ci = commit
+  co = checkout
+  d = diff
+  l = log
+  st = status
+  sub = submodule
