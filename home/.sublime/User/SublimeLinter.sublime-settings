@@ -44,5 +44,6 @@
     "sub": true,
     "trailing": true,
     "wsh": true
-  }
+  },
+  "sublimelinter": "load-save"
 }

@@ -10,6 +10,7 @@
 	"fade_fold_buttons": false,
 	"file_exclude_patterns":
 	[
+		".keep",
 		"*.hi",
 		".gitkeep",
 		"*.pyc",
@@ -34,12 +35,15 @@
 	],
 	"find_selected_text": true,
 	"font_face": "Courier",
-	"font_options": ["directwrite"],
+	"font_options":
+	[
+		"directwrite"
+	],
 	"font_size": 12,
 	"ignored_packages":
 	[
-		"vintage",
 		"Vintage",
+		"vintage",
 		"Perforce",
 		"Nodejs"
 	],
@@ -53,7 +57,6 @@
 	],
 	"scroll_past_end": true,
 	"scroll_speed": 5.0,
-	"sublimelinter": "load-save",
 	"tab_size": 2,
 	"theme": "Flatland Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
