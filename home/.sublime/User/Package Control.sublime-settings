@@ -3,6 +3,7 @@
 	"installed_packages":
 	[
 		"Auto Encoding for Ruby",
+		"Browser Refresh",
 		"CoffeeScript",
 		"EasyMotion",
 		"EJS",
@@ -11,6 +12,7 @@
 		"Io Language",
 		"Jade",
 		"LESS",
+		"LiveReload",
 		"Nodejs",
 		"Package Control",
 		"Perforce",

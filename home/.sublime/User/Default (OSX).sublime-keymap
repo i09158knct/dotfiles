@@ -33,6 +33,15 @@
         "key": "emmet_action_enabled.expand_abbreviation"
       }
     ]
+  },
+
+  {
+      "keys": ["command+shift+r"], "command": "browser_refresh", "args": {
+          "auto_save": false,
+          "delay": 0.0,
+          "activate_browser": false,
+          "browser_name" : "all"
+      }
   }
 ]
 

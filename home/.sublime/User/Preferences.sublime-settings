@@ -45,7 +45,8 @@
 		"Vintage",
 		"vintage",
 		"Perforce",
-		"Nodejs"
+		"Nodejs",
+		"LiveReload"
 	],
 	"margin": -5,
 	"move_to_limit_on_up_down": true,
