@@ -2,10 +2,9 @@
   { "keys": ["command+shift+,"], "command": "erb" },
   { "keys": ["ctrl+i"], "command": "reindent"},
   { "keys": ["f1"], "command": "side_bar_new_file" },
-  { "keys": ["f2"], "command": "side_bar_rename" },
+  { "keys": ["f2"], "command": "side_bar_move" },
   { "keys": ["f3"], "command": "side_bar_duplicate" },
-  { "keys": ["f4"], "command": "side_bar_move" },
-  { "keys": ["f5"], "command": "side_bar_delete" },
+  { "keys": ["f4"], "command": "side_bar_delete" },
   { "keys": ["shift+command+m"], "command": "markdown_preview", "args": {"target": "browser"} },
   { "keys": ["ctrl+d"], "command": "right_delete"},
 
