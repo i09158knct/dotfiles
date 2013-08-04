@@ -44,10 +44,10 @@
 	"ignored_packages":
 	[
 		"Vintage",
+		"LiveReload",
 		"vintage",
 		"Perforce",
-		"Nodejs",
-		"LiveReload"
+		"Nodejs"
 	],
 	"margin": -5,
 	"move_to_limit_on_up_down": true,

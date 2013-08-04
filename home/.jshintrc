@@ -1,0 +1,14 @@
+{
+  "browser": true,
+  "devel": true,
+  "eqnull": true,
+  "evil": true,
+  "immed": true,
+  "latedef": true,
+  "laxcomma": true,
+  "regexdash": true,
+  "sub": true,
+  "trailing": true,
+  // "unsafechars": true,
+  "wsh": true
+}

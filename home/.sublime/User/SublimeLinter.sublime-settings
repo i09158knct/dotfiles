@@ -30,20 +30,5 @@
     "vendor-prefix": true,
     "zero-units": "warning"
   },
-  "jshint_options":
-  {
-    "browser": true,
-    "devel": true,
-    "eqnull": true,
-    "es5": true,
-    "evil": true,
-    "immed": true,
-    "latedef": true,
-    "laxcomma": true,
-    "regexdash": true,
-    "sub": true,
-    "trailing": true,
-    "wsh": true
-  },
   "sublimelinter": "load-save"
 }

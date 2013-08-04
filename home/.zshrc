@@ -144,6 +144,7 @@ case ${OSTYPE} in
            ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Theme\ -\ Flatland
     alias copywd="pwd | pbcopy"
     alias ls="ls -FG"
+    export SCALA_HOME=/usr/local/Cellar/scala/2.10.2/libexec
     ;;
 
   linux*)
