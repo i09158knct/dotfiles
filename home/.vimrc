@@ -27,6 +27,7 @@ set splitright
 
 """ Edit
 set mouse=a
+set clipboard=unnamed,autoselect
 set backspace=indent,eol,start
 set whichwrap=b,s,h,s,<,>,[,]
 
