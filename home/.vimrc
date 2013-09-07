@@ -4,7 +4,7 @@ filetype off
 
 
 """ Theme
-color elflord
+color desert
 set background=dark
 set t_Co=256
 syntax on
@@ -29,7 +29,8 @@ set splitright
 set mouse=a
 set clipboard=unnamed,autoselect
 set backspace=indent,eol,start
-set whichwrap=b,s,h,l,<,>,[,]
+set whichwrap=b,s
+"set whichwrap=b,s,h,l,<,>,[,]
 
 
 
@@ -127,8 +128,6 @@ inoremap <C-t> <C-w>w
 inoremap <C-w><C-v> <ESC>:new<CR>
 inoremap <C-w><C-h> <ESC>:vne<CR>
 
-
-nnoremap ; :
 
 inoremap <C-c> <C-n>
 
