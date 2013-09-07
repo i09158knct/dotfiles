@@ -65,6 +65,17 @@
 
 
 
+;;; Modes
+(setq process-coding-system-alist
+      (cons '("gosh" utf-8 . utf-8) process-coding-system-alist))
+
+;; gosh
+(setq scheme-program-name "gosh -i")
+;(autoload 'scheme-mode "cmscheme" "Major mode for Scheme." t)
+;(autoload 'run-scheme "cmuscheme" "Run an inferior Scheme process." t)
+
+
+
 ;;; Packages
 (require 'package)
 (add-to-list 'package-archives

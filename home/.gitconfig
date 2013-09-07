@@ -1,6 +1,6 @@
 [user]
-  name = i09158knct
-  email = i09158knct@gmail.com
+	name = i09158knct
+	email = i09158knct@gmail.com
 [include]
   path = .gitconfig.local
 [color]
@@ -9,13 +9,20 @@
   generic = g move-first-line
   generic = G move-last-line
 [core]
-  excludesfile = ~/.gitignore
+	excludesfile = /Users/qwkj39/.gitignore
   editor = /usr/bin/vim
 [alias]
   b = branch
   ci = commit
+  cm = commit
   co = checkout
   d = diff
   l = log
   st = status
   sub = submodule
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

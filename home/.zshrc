@@ -126,12 +126,15 @@ function () {
 # Aliases
 alias g="git"
 alias r="rails"
+alias sr="spring rails"
+alias srk="spring rake"
 alias gad="git add"
 alias gst="git status"
 alias gcm="git commit"
 alias gps="git push"
 alias gpl="git pull"
 alias pyserver="python -m SimpleHTTPServer"
+alias c="cd \`s\`"
 
 
 
