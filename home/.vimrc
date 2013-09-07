@@ -29,7 +29,7 @@ set splitright
 set mouse=a
 set clipboard=unnamed,autoselect
 set backspace=indent,eol,start
-set whichwrap=b,s,h,s,<,>,[,]
+set whichwrap=b,s,h,l,<,>,[,]
 
 
 
