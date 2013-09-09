@@ -98,12 +98,12 @@ NeoBundle 'kchmck/vim-coffee-script'
 let mapleader = ","
 inoremap <C-@> <C-[>
 
-nnoremap m <Nop>
-nnoremap t <Nop>
-nnoremap s <Nop>
-nnoremap Q <Nop>
-nnoremap ZZ <Nop>
-nnoremap ZQ <Nop>
+"nnoremap m <Nop>
+"nnoremap t <Nop>
+"nnoremap s <Nop>
+"nnoremap Q <Nop>
+"nnoremap ZZ <Nop>
+"nnoremap ZQ <Nop>
 
 
 "" Emacs
