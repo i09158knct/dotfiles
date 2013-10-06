@@ -75,8 +75,8 @@ S.bindAll({
   // 'tab:shift,cmd': S.op('switch'),
 
   'q:ctrl,cmd': shellSync('/usr/bin/open -a iterm'),
-  'w:ctrl,cmd': shellSync('~/bin/slate-open-chrome.sh'),
-  'e:ctrl,cmd': shellSync('~/bin/slate-open-sublime.sh'),
+  'w:ctrl,cmd': shellSync('~/.slate.d/slate-open-chrome.sh'),
+  'e:ctrl,cmd': shellSync('~/.slate.d/slate-open-sublime.sh'),
 
   // 'k:ctrl,cmd': focusTo('up'),
   // 'j:ctrl,cmd': focusTo('down'),
