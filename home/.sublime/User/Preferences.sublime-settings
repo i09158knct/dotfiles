@@ -34,12 +34,12 @@
 		"*.db"
 	],
 	"find_selected_text": true,
-	"font_face": "Courier",
+	"font_face": "Ricty",
 	"font_options":
 	[
 		"directwrite"
 	],
-	"font_size": 12,
+	"font_size": 15,
 	"highlight_line": true,
 	"ignored_packages":
 	[

@@ -12,8 +12,8 @@ syntax on
 
 
 """ Editor
-set noswapfile
-set nobackup
+"set noswapfile
+"set nobackup
 set hidden
 set autoread
 
