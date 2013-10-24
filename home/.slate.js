@@ -23,7 +23,7 @@ function resize(width, height) {
 
 function stretch(opts) {
   return function(window) {
-    var prevPos, pos, x, y;
+    var prevPos, pos, x, y, width, height;
     prevPos = window.topLeft();
 
     x = '-' + (opts.left || '0');
@@ -39,7 +39,7 @@ function stretch(opts) {
 
 function shrink(opts) {
   return function(window) {
-    var prevSize, size, x, y;
+    var prevSize, size, x, y, width, height;
     prevSize = window.size();
 
     width = '-' + (opts.right || opts.left || '0');
@@ -68,7 +68,7 @@ S.cfga({
 
 S.bindAll({
   'r:ctrl,cmd': S.op('relaunch'),
-  ';:ctrl,cmd': S.op('hint', { characters: 'sdfjkl;1234567890' }),
+  ';:ctrl,cmd': S.op('hint'),
   // 'z:ctrl,cmd': S.op('undo'),
   // 'esc:ctrl': S.op('grid'),
   // 'tab:cmd': S.op('switch'),
@@ -93,15 +93,15 @@ S.bindAll({
   'left:shift,ctrl,cmd' : nudge('-3%', '+0%'),
   'right:shift,ctrl,cmd': nudge('+3%', '+0%'),
 
-  'k:ctrl,cmd': [stretch({ top: '3%' }), true],
-  'j:ctrl,cmd': [stretch({ bottom: '3%' }), true],
-  'h:ctrl,cmd': [stretch({ left: '3%' }), true],
-  'l:ctrl,cmd': [stretch({ right: '3%' }), true],
+  'pageUp:ctrl,cmd': [stretch({ top: '3%' }), true],
+  'pageDown:ctrl,cmd': [stretch({ bottom: '3%' }), true],
+  'home:ctrl,cmd': [stretch({ left: '3%' }), true],
+  'end:ctrl,cmd': [stretch({ right: '3%' }), true],
 
-  'k:shift,ctrl,cmd': [shrink({ bottom: '3%' }), true],
-  'j:shift,ctrl,cmd': [shrink({ top: '3%' }), true],
-  'h:shift,ctrl,cmd': [shrink({ right: '3%' }), true],
-  'l:shift,ctrl,cmd': [shrink({ left: '3%' }), true],
+  'pageUp:shift,ctrl,cmd': [shrink({ bottom: '3%' }), true],
+  'pageDown:shift,ctrl,cmd': [shrink({ top: '3%' }), true],
+  'home:shift,ctrl,cmd': [shrink({ right: '3%' }), true],
+  'end:shift,ctrl,cmd': [shrink({ left: '3%' }), true],
 });
 
 
