@@ -27,7 +27,7 @@ set splitright
 
 """ Edit
 set mouse=a
-set clipboard=unnamed,autoselect
+"set clipboard=unnamed,autoselect
 set backspace=indent,eol,start
 set whichwrap=b,s
 "set whichwrap=b,s,h,l,<,>,[,]
@@ -82,15 +82,15 @@ au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
 
 
 
-""" Plugin
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#rc(expand('~/.vim/bundle'))
-endif
-
-NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/vimproc'
-NeoBundle 'kchmck/vim-coffee-script'
+""" Plugins
+" if has('vim_starting')
+"   set runtimepath+=~/.vim/bundle/neobundle.vim
+"   call neobundle#rc(expand('~/.vim/bundle'))
+" endif
+"
+" NeoBundle 'Shougo/neobundle.vim'
+" NeoBundle 'Shougo/vimproc'
+" NeoBundle 'kchmck/vim-coffee-script'
 
 
 
@@ -114,7 +114,7 @@ inoremap <C-b> <Left>
 
 inoremap <C-a> <Home>
 inoremap <C-e> <End>
-inoremap <C-k> <ESC>
+inoremap <C-y> <C-r>"
 
 inoremap <C-d> <Delete>
 inoremap <C-h> <C-h>
