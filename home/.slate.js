@@ -68,7 +68,7 @@ S.cfga({
 
 S.bindAll({
   'r:ctrl,cmd': S.op('relaunch'),
-  ';:ctrl,cmd': S.op('hint'),
+  ';:ctrl,cmd': S.op('hint', { characters: 'sdfjkl;1234567890' }),
   // 'z:ctrl,cmd': S.op('undo'),
   // 'esc:ctrl': S.op('grid'),
   // 'tab:cmd': S.op('switch'),
@@ -93,15 +93,15 @@ S.bindAll({
   'left:shift,ctrl,cmd' : nudge('-3%', '+0%'),
   'right:shift,ctrl,cmd': nudge('+3%', '+0%'),
 
-  'pageUp:ctrl,cmd': [stretch({ top: '3%' }), true],
-  'pageDown:ctrl,cmd': [stretch({ bottom: '3%' }), true],
-  'home:ctrl,cmd': [stretch({ left: '3%' }), true],
-  'end:ctrl,cmd': [stretch({ right: '3%' }), true],
+  'k:ctrl,cmd': [stretch({ top: '3%' }), true],
+  'j:ctrl,cmd': [stretch({ bottom: '3%' }), true],
+  'h:ctrl,cmd': [stretch({ left: '3%' }), true],
+  'l:ctrl,cmd': [stretch({ right: '3%' }), true],
 
-  'pageUp:shift,ctrl,cmd': [shrink({ bottom: '3%' }), true],
-  'pageDown:shift,ctrl,cmd': [shrink({ top: '3%' }), true],
-  'home:shift,ctrl,cmd': [shrink({ right: '3%' }), true],
-  'end:shift,ctrl,cmd': [shrink({ left: '3%' }), true],
+  'k:shift,ctrl,cmd': [shrink({ bottom: '3%' }), true],
+  'j:shift,ctrl,cmd': [shrink({ top: '3%' }), true],
+  'h:shift,ctrl,cmd': [shrink({ right: '3%' }), true],
+  'l:shift,ctrl,cmd': [shrink({ left: '3%' }), true],
 });
 
 
