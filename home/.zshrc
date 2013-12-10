@@ -139,34 +139,12 @@ alias c="cd \`s\`"
 
 
 # Each OS
-case ${OSTYPE} in
-  darwin*)
-    ln -fs ~/.sublime/User \
-           ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
-    ln -fs ~/.sublime/User/themes/flatland \
-           ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Theme\ -\ Flatland
-    alias copywd="pwd | pbcopy"
-    alias ls="ls -FG"
-    alias vi="/Applications/MacVim.app/Contents/MacOS/Vim"
-    alias vim=vi
-    alias gosh="rlwrap gosh"
-    alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
-    export SCALA_HOME=/usr/local/Cellar/scala/2.10.2/libexec
-    export EDITOR="/Applications/MacVim.app/Contents/MacOS/Vim"
-    ;;
+source ".zshrc-`uname | awk '{print tolower}'`.zsh"
 
-  linux*)
-    xmodmap .Xmodmap.ubuntu
-    ln -fs ~/.sublime/User \
-           ~/.config/sublime-text-2/Packages/User
-    ln -fs ~/.sublime/User/themes/flatland \
-           ~/.config/sublime-text-2/Packages/Theme\ -\ Flatland
-    function subl() {
-      ~/Applications/Sublime\ Text\ 2/sublime_text $@ &
-    }
-    ;;
-
-esac
+# MEMO: OS Detection
+#   `uname`    -> Darwin
+#   `uname -v` -> Darwin Kernel Version 13.0.0: Thu Sep 19 22:22:27 PDT ...
+#   ${OSTYPE}  -> darwin11.4.2
 
 [ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
 
