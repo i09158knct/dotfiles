@@ -8,6 +8,8 @@
   { "keys": ["shift+command+m"], "command": "markdown_preview", "args": {"target": "browser"} },
   { "keys": ["ctrl+d"], "command": "right_delete"},
 
+  { "keys": ["ctrl+@"], "command": "exit_insert_mode"},
+  { "keys": ["ctrl+["], "command": "exit_insert_mode"},
 
   { "keys": ["ctrl+y"], "command": "yank"},
   { "keys": ["ctrl+k"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete to Hard EOL.sublime-macro"}},
@@ -42,5 +44,7 @@
           "browser_name" : "all"
       }
   }
+
+
 ]
 
