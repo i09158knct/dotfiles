@@ -43,9 +43,9 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Vintage",
+		// "Vintage",
+		// "vintage",
 		"LiveReload",
-		"vintage",
 		"Perforce",
 		"Nodejs"
 	],
