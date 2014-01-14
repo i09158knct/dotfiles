@@ -98,15 +98,19 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init -)"
 
+function exist() {
+  $(which $1 > /dev/null 2>&1)
+}
+
 
 
 # nvm
-source ~/.nvm/nvm.sh
+[ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh
 
 
 
 # fasd
-[ fasd ] && eval "$(fasd --init auto)"
+exist fasd && eval "$(fasd --init auto)"
 
 
 
@@ -138,7 +142,7 @@ alias c="cd \`s\`"
 
 
 # Each OS
-source "$HOME/.zshrc-`uname | awk '{print tolower}'`.zsh"
+source "$HOME/.zshrc-`uname | awk '{print tolower($0)}'`.zsh"
 
 # MEMO: OS Detection
 #   `uname`    -> Darwin
