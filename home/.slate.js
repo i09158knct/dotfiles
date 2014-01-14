@@ -68,7 +68,7 @@ S.cfga({
 
 S.bindAll({
   'r:ctrl,cmd': S.op('relaunch'),
-  ';:ctrl,cmd': S.op('hint', { characters: 'sdfjkl;1234567890' }),
+  // ';:ctrl,cmd': S.op('hint', { characters: 'sdfjkl;1234567890' }),
   // 'z:ctrl,cmd': S.op('undo'),
   // 'esc:ctrl': S.op('grid'),
   // 'tab:cmd': S.op('switch'),
