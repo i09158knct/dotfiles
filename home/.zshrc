@@ -14,8 +14,7 @@ function () {
   local cdir="%F{yellow}%~%f"
   local prmpt="%B%#%b"
   local prmpt="%F{green}%0(?||%18(?||%f%F{red}))%#%f"
-  local br="
-"
+  local br=$'\n'
 
   PROMPT="%B$username $ctime $cdir$br$prmpt%b "
   PROMPT2="%_ >"
@@ -139,7 +138,7 @@ alias c="cd \`s\`"
 
 
 # Each OS
-source ".zshrc-`uname | awk '{print tolower}'`.zsh"
+source "$HOME/.zshrc-`uname | awk '{print tolower}'`.zsh"
 
 # MEMO: OS Detection
 #   `uname`    -> Darwin

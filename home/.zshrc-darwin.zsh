@@ -1,5 +1,9 @@
+# Python
+# PATH=$HOME/local/py3/bin:$PATH
+# source ~/local/py3/bin/virtualenvwrapper.sh
+
 ln -fs ~/.sublime/User \
-       ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
+       ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
 ln -fs ~/.sublime/User/themes/flatland \
        ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Theme\ -\ Flatland
 alias copywd="pwd | pbcopy"
