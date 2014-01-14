@@ -1,5 +1,4 @@
 {
-	"auto_upgrade_last_run": null,
 	"installed_packages":
 	[
 		"Auto Encoding for Ruby",
@@ -12,10 +11,10 @@
 		"Io Language",
 		"Jade",
 		"LESS",
-		"LiveReload",
 		"Nodejs",
 		"Package Control",
 		"Perforce",
+		"Quick Look",
 		"RSpec",
 		"Ruby Markers",
 		"ruby-slim.tmbundle",
@@ -29,14 +28,5 @@
 		"Theme - Night",
 		"Theme - Phoenix",
 		"Tomorrow Color Schemes"
-	],
-	"repositories":
-	[
-		"https://github.com/SublimeText/SideBarGit.git",
-		"https://github.com/SublimeLinter/SublimeLinter.git",
-		"https://github.com/SublimeText/jQuery.git",
-		"https://github.com/SublimeText/Tag.git",
-		"https://github.com/titoBouzout/SideBarEnhancements.git",
-		"https://bitbucket.org/sublimator/sublime-2-zencoding/wiki"
 	]
 }

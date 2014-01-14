@@ -43,10 +43,6 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		// "Vintage",
-		// "vintage",
-		"LiveReload",
-		"Perforce",
 		"Nodejs"
 	],
 	"margin": -5,
@@ -59,6 +55,7 @@
 	],
 	"scroll_past_end": true,
 	"scroll_speed": 5.0,
+	"shift_tab_unindent": true,
 	"tab_size": 2,
 	"theme": "Flatland Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,

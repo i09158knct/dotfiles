@@ -1,6 +1,9 @@
 [
   { "keys": ["command+shift+,"], "command": "erb" },
+
+  { "keys": ["ctrl+shift+i"], "command": "reindent" , "args": { "single_line": false } },
   { "keys": ["ctrl+i"], "command": "reindent"},
+
   { "keys": ["f1"], "command": "side_bar_new_file" },
   { "keys": ["f2"], "command": "side_bar_move" },
   { "keys": ["f3"], "command": "side_bar_duplicate" },
