@@ -43,7 +43,6 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Nodejs"
 	],
 	"margin": -5,
 	"move_to_limit_on_up_down": true,
@@ -56,6 +55,7 @@
 	"scroll_past_end": true,
 	"scroll_speed": 5.0,
 	"shift_tab_unindent": true,
+	"sublimelinter": "load-save",
 	"tab_size": 2,
 	"theme": "Flatland Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,

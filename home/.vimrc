@@ -52,7 +52,7 @@ set cursorline
 set ruler
 set scrolloff=3
 set showmatch
-set nowrap
+"set nowrap
 
 augroup HighlightTrailingSpaces
   autocmd!

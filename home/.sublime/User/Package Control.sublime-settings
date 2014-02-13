@@ -1,32 +1,18 @@
 {
 	"installed_packages":
 	[
-		"Auto Encoding for Ruby",
+		"AutoFileName",
 		"Browser Refresh",
 		"CoffeeScript",
 		"EasyMotion",
-		"EJS",
 		"Emmet",
-		"Grunt",
-		"Io Language",
-		"Jade",
-		"LESS",
-		"Nodejs",
 		"Package Control",
-		"Perforce",
 		"Quick Look",
-		"RSpec",
-		"Ruby Markers",
-		"ruby-slim.tmbundle",
 		"SideBarEnhancements",
-		"SideBarGit",
-		"Stylus",
-		"SublimeLinter",
-		"SublimePeek",
-		"SublimeREPL",
-		"SublimeXiki",
-		"Theme - Night",
-		"Theme - Phoenix",
-		"Tomorrow Color Schemes"
+		"SublimeLinter"
+	],
+	"repositories":
+	[
+		"https://github.com/titoBouzout/SideBarEnhancements"
 	]
 }
