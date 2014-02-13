@@ -1,2 +1,6 @@
 home/.emacs.d/auto-save-list/*
 home/.emacs.d/backups/*
+home/.sublime/User/Package Control.cache
+home/.sublime/User/Package Control.system-ca-bundle
+home/.emacs.d/*
+home/.vim/bundle/*
