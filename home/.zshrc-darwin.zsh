@@ -2,6 +2,8 @@
 # PATH=$HOME/local/py3/bin:$PATH
 # source ~/local/py3/bin/virtualenvwrapper.sh
 
+PATH=$HOME/Library/Haskell/bin:$PATH
+
 ln -fs ~/.sublime/User \
        ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
 ln -fs ~/.sublime/User/themes/flatland \
