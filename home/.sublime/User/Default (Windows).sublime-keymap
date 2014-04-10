@@ -1,2 +1,45 @@
 [
+  { "keys": ["f1"], "command": "side_bar_new_file" },
+  { "keys": ["f2"], "command": "side_bar_move" },
+  { "keys": ["f3"], "command": "side_bar_duplicate" },
+  { "keys": ["f4"], "command": "side_bar_delete" },
+
+  { "keys": ["ctrl+shift+,"], "command": "erb" },
+  { "keys": ["ctrl+i"], "command": "reindent"},
+
+  { "keys": ["ctrl+shift+["], "command": "prev_view"},
+  { "keys": ["ctrl+shift+]"], "command": "next_view"},
+
+  {
+    "keys": ["ctrl+shift+up"], "command": "select_lines",
+    "args": {"forward": false}
+  },
+
+  {
+    "keys": ["ctrl+shift+down"], "command": "select_lines",
+    "args": {"forward": true}
+  },
+
+  {
+    "keys": ["ctrl+e"],
+    "args": {
+      "action": "expand_abbreviation"
+    },
+    "command": "run_emmet_action",
+    "context": [
+      {
+        "key": "emmet_action_enabled.expand_abbreviation"
+      }
+    ]
+  },
+
+
+  {
+    "keys": ["ctrl+shift+r"], "command": "browser_refresh", "args": {
+      "auto_save": true,
+      "delay": 0.5,
+      "activate_browser": true,
+      "browser_name" : "all"
+    }
+  }
 ]
