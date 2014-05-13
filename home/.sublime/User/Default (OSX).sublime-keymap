@@ -13,6 +13,17 @@
 
   { "keys": ["ctrl+@"], "command": "exit_insert_mode"},
   { "keys": ["ctrl+["], "command": "exit_insert_mode"},
+  { "keys": ["ctrl+["], "command": "exit_visual_mode",
+    "context": [{ "key": "setting.command_mode"}]
+  },
+  { "keys": ["escape"], "command": "single_selection",
+    "context":
+    [
+      { "key": "setting.command_mode", "operand": false },
+      { "key": "setting.is_widget", "operand": false },
+      { "key": "num_selections", "operator": "not_equal", "operand": 1}
+    ]
+  },
 
   { "keys": ["ctrl+y"], "command": "yank"},
   { "keys": ["ctrl+k"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete to Hard EOL.sublime-macro"}},

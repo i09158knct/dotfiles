@@ -26,8 +26,7 @@ set splitright
 
 
 """ Edit
-set mouse=a
-"set clipboard=unnamed,autoselect
+set clipboard=unnamed
 set backspace=indent,eol,start
 set whichwrap=b,s
 "set whichwrap=b,s,h,l,<,>,[,]
@@ -52,7 +51,10 @@ set cursorline
 set ruler
 set scrolloff=3
 set showmatch
-"set nowrap
+set nowrap
+set sidescroll=1
+set sidescrolloff=3
+set listchars=extends:>,precedes:<
 
 augroup HighlightTrailingSpaces
   autocmd!
@@ -78,7 +80,7 @@ set wildmode=list:full
 
 
 """ File Types
-au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
+autocmd BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
 
 
 
@@ -96,6 +98,7 @@ au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
 
 """ Key Bindings
 let mapleader = ","
+inoremap <C-,> ,
 inoremap <C-@> <C-[>
 
 "nnoremap m <Nop>
@@ -122,14 +125,8 @@ inoremap <C-h> <C-h>
 
 "" Window
 nnoremap <C-t> <C-w>w
-nnoremap <C-w><C-v> :new<CR>
-nnoremap <C-w><C-h> :vne<CR>
 inoremap <C-t> <C-w>w
-inoremap <C-w><C-v> <ESC>:new<CR>
-inoremap <C-w><C-h> <ESC>:vne<CR>
 
-
-inoremap <C-c> <C-n>
 
 
 """ End

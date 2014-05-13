@@ -5,9 +5,13 @@
 		"Browser Refresh",
 		"CoffeeScript",
 		"EasyMotion",
+		"EJS",
 		"Emmet",
+		"Jade",
+		"LESS",
 		"Package Control",
 		"Quick Look",
+		"Ruby Slim",
 		"SideBarEnhancements",
 		"SublimeLinter"
 	],
