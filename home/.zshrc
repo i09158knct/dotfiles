@@ -138,6 +138,8 @@ alias gps="git push"
 alias gpl="git pull"
 alias pyserver="python -m SimpleHTTPServer"
 alias c="cd \`s\`"
+alias be="bundle exec"
+alias getjs="pulldown"
 
 
 
