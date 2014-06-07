@@ -7,6 +7,7 @@ filetype off
 color desert
 set background=dark
 set t_Co=256
+set notitle
 syntax on
 
 
@@ -26,7 +27,7 @@ set splitright
 
 
 """ Edit
-set clipboard=unnamed
+"set clipboard=unnamed
 set backspace=indent,eol,start
 set whichwrap=b,s
 "set whichwrap=b,s,h,l,<,>,[,]
