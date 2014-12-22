@@ -91,6 +91,12 @@ add-zsh-hook precmd _update_vcs_info_msg
 # PATHs
 export PATH="$PATH:$HOME/bin"
 
+# golang
+export GOROOT=/usr/local/go
+export GOPATH="$HOME"
+export PATH="$PATH:$GOROOT/bin"
+export PATH="$PATH:$GOPATH/bin"
+
 
 
 # rbenv
