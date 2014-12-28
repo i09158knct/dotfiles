@@ -4,17 +4,17 @@ filetype off
 
 
 """ Theme
-color desert
+"color desert
 set background=dark
 set t_Co=256
 set notitle
-syntax on
 
 
 
 """ Editor
 set noswapfile
 set nobackup
+set backupskip=/tmp/*,/private/tmp/*
 set hidden
 set autoread
 
@@ -29,8 +29,6 @@ set splitright
 """ Edit
 "set clipboard=unnamed
 set backspace=indent,eol,start
-set whichwrap=b,s
-"set whichwrap=b,s,h,l,<,>,[,]
 
 
 
@@ -43,19 +41,18 @@ set autoindent
 set smartindent
 set smarttab
 
-autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
-
 
 
 """ View
-set cursorline
 set ruler
 set scrolloff=3
 set showmatch
+set matchtime=2
 set nowrap
 set sidescroll=1
 set sidescrolloff=3
-set listchars=extends:>,precedes:<
+set list
+set listchars=tab:\ \ ,extends:>,precedes:<
 
 augroup HighlightTrailingSpaces
   autocmd!
@@ -80,11 +77,6 @@ set wildmode=list:full
 
 
 
-""" File Types
-autocmd BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
-
-
-
 """ Plugins
 " if has('vim_starting')
 "   set runtimepath+=~/.vim/bundle/neobundle.vim
@@ -93,7 +85,6 @@ autocmd BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
 "
 " NeoBundle 'Shougo/neobundle.vim'
 " NeoBundle 'Shougo/vimproc'
-" NeoBundle 'kchmck/vim-coffee-script'
 
 
 
@@ -102,10 +93,6 @@ let mapleader = ","
 inoremap <C-,> ,
 inoremap <C-@> <C-[>
 
-"nnoremap m <Nop>
-"nnoremap t <Nop>
-"nnoremap s <Nop>
-"nnoremap Q <Nop>
 "nnoremap ZZ <Nop>
 "nnoremap ZQ <Nop>
 
@@ -122,11 +109,6 @@ inoremap <C-y> <C-r>"
 
 inoremap <C-d> <Delete>
 inoremap <C-h> <C-h>
-
-
-"" Window
-nnoremap <C-t> <C-w>w
-inoremap <C-t> <C-w>w
 
 
 
