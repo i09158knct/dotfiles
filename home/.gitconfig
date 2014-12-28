@@ -1,34 +1,28 @@
 [user]
-  name = i09158knct
-  email = i09158knct@gmail.com
+	name = i09158knct
+	email = i09158knct@gmail.com
 [include]
-  path = .gitconfig.local
+	path = .gitconfig.local
 [color]
-  ui = auto
+	ui = auto
 [tig "bind"]
-  generic = g move-first-line
-  generic = G move-last-line
+	generic = g move-first-line
+	generic = G move-last-line
 [core]
-  excludesfile = ~/.gitignore
-  editor = vim
+	excludesfile = ~/.gitignore
+	editor = vim
+	precomposeunicode = true
 [alias]
-  b = branch
-  ci = commit
-  cm = commit
-  co = checkout
-  d = diff
-  l = log
-  st = status
-  sub = submodule
-# [difftool "sourcetree"]
-#   cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-#   path =
-# [mergetool "sourcetree"]
-#   cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-#   trustExitCode = true
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /opt/homebrew-cask/Caskroom/sourcetree/1.8.1/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+	b = branch
+	ci = commit
+	cm = commit
+	co = checkout
+	d = diff
+	l = log
+	st = status
+	sub = submodule
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[ghq]
+	root = ~/src
