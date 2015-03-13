@@ -160,6 +160,45 @@ source "$HOME/.zshrc-`uname | awk '{print tolower($0)}'`.zsh"
 [ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
 
 
+# peco
+# http://k0kubun.hatenablog.com/entry/2014/07/06/033336
+function peco-select-history() {
+    typeset tac
+    if which tac > /dev/null; then
+        tac=tac
+    else
+        tac='tail -r'
+    fi
+    BUFFER=$(fc -l -n 1 | eval $tac | peco --query "$LBUFFER")
+    CURSOR=$#BUFFER
+    zle redisplay
+}
+zle -N peco-select-history
+bindkey '^r' peco-select-history
+
+
+function peco-pkill() {
+    for pid in `ps aux | peco | awk '{ print $2 }'`
+    do
+        kill $pid
+        echo "Killed ${pid}"
+    done
+}
+alias pk="peco-pkill"
+
+function peco-src() {
+    local selected_dir=$(ghq list | peco --query "$LBUFFER")
+    if [ -n "$selected_dir" ]; then
+        BUFFER="cd ${GOPATH}/src/${selected_dir}"
+        zle accept-line
+    fi
+    zle redisplay
+}
+zle -N peco-src
+stty -ixon
+bindkey '^s' peco-src
+
+
 
 # End
 true

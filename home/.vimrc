@@ -4,7 +4,6 @@ filetype off
 
 
 """ Theme
-"color desert
 set background=dark
 set t_Co=256
 set notitle
@@ -44,6 +43,7 @@ set smarttab
 
 
 """ View
+set completeopt=menu,preview
 set ruler
 set scrolloff=3
 set showmatch
@@ -78,14 +78,29 @@ set wildmode=list:full
 
 
 """ Plugins
-" if has('vim_starting')
-"   set runtimepath+=~/.vim/bundle/neobundle.vim
-"   call neobundle#rc(expand('~/.vim/bundle'))
-" endif
-"
-" NeoBundle 'Shougo/neobundle.vim'
-" NeoBundle 'Shougo/vimproc'
+if has('vim_starting')
+  if &compatible
+    set nocompatible               " Be iMproved
+  endif
 
+  " Required:
+  set runtimepath+=/home/ubuntu/.vim/bundle/neobundle.vim/
+endif
+
+" Required:
+call neobundle#begin(expand('/home/ubuntu/.vim/bundle'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'fatih/vim-go'
+NeoBundle 'tomasr/molokai'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'thinca/vim-quickrun'
+call neobundle#end()
+NeoBundleCheck
+exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
 
 
 """ Key Bindings
@@ -116,3 +131,18 @@ inoremap <C-h> <C-h>
 filetype plugin indent on
 filetype indent on
 syntax on
+let g:solarized_termcolors=256
+colorscheme solarized
+
+""" QuickRun
+"QuickRun -outputter/buffer/split ":botright"
+let g:quickrun_config = {
+\   '_': {
+\     'outputter/buffer/split': ':botright 12sp'
+\   },
+\   'cpp': {
+\     'command': 'g++',
+\     'cmdopt': '-std=c++11'
+\   }
+\ }
+
