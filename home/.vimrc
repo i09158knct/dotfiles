@@ -80,15 +80,13 @@ set wildmode=list:full
 """ Plugins
 if has('vim_starting')
   if &compatible
-    set nocompatible               " Be iMproved
+    set nocompatible
   endif
-
-  " Required:
-  set runtimepath+=/home/ubuntu/.vim/bundle/neobundle.vim/
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 " Required:
-call neobundle#begin(expand('/home/ubuntu/.vim/bundle'))
+call neobundle#begin(expand('~/.vim/bundle'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
@@ -98,6 +96,8 @@ NeoBundle 'fatih/vim-go'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'vim-jp/vimdoc-ja'
 call neobundle#end()
 NeoBundleCheck
 exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
@@ -105,6 +105,7 @@ exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
 
 """ Key Bindings
 let mapleader = ","
+nnoremap <Leader>/ :NERDTreeToggle<CR>
 inoremap <C-,> ,
 inoremap <C-@> <C-[>
 
@@ -131,8 +132,6 @@ inoremap <C-h> <C-h>
 filetype plugin indent on
 filetype indent on
 syntax on
-let g:solarized_termcolors=256
-colorscheme solarized
 
 """ QuickRun
 "QuickRun -outputter/buffer/split ":botright"
